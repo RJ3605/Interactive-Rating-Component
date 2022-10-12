@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Interactive Rating Component</title>
+  </head>
+  <body>
+    <main>
+      <div class="container" id="question">
+        <button type="button" class="star">
+          <img src="icon-star.svg" alt="star icon"/>
+        </button>
+        <div class="text">
+          <h1 class="title">How did we do?</h1>
+          <p class="request">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <form onsubmit="return false">
+         <div class="ratings">
+            <label for="radio-1" class="rating" name="radio_label" required>
+              <input type="radio" value="1" name="radio" id="radio-1" class="button" required></input>
+              1
+            </label>
+            <label for="radio-2" class="rating" name="radio_label">
+              <input type="radio" value="2" name="radio" id="radio-2" class="button" required></input>
+              2
+            </label>
+            <label for="radio-3" class="rating" name="radio_label">
+              <input type="radio" value="3" name="radio" id="radio-3" class="button" required></input>
+              3
+            </label>
+            <label for="radio-4" class="rating" name="radio_label">
+              <input type="radio" value="4" name="radio" id="radio-4" class="button" required></input>
+              4
+            </label>
+            <label for="radio-5" class="rating" name="radio_label">
+              <input type="radio" value="5" name="radio" id="radio-5" class="button" required></input>
+              5
+            </label>
+         </div>
+        <button type="submit" class="submit" id="submit">SUBMIT</button>
+        </form>
+      </div>
+      <div class="container" id="response">
+        <div class="image">
+         <picture>
+           <img src="illustration-thank-you.svg" alt="submission received">
+         </picture>
+        </div>
+        <div class="thank_you_items">
+          <div class="receipt">You selected <span id="chosen"></span> out of 5</div>
+          <h1 class="thank_you">Thank you!</h1>
+          <p class="appreciation">
+            We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="interactive.js"></script>
+  </body>
+</html>
