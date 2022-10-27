@@ -7,18 +7,16 @@ let span = document.getElementById("chosen");
 
 response.hidden = true;
 
-for (var i = button.length - 1; i > -1; i--) {
-  var currentButton;
-  button[i].onclick = function () {
-    if (currentButton) {
-      currentButton.classList.remove("active");
-    }
-    this.classList.add("active");
-    currentButton = this;
-    span.innerText = currentButton.innerText;
-    submit.addEventListener("click", () => {
-      question.hidden = true;
-      response.hidden = false;
-    });
-  };
-}
+const ratings = document.querySelectorAll(`.rating`);
+ratings.forEach((rating) => {
+  rating.addEventListener(`click`, (event) => {
+    document.querySelector(`.rating.active`)?.classList.remove(`active`);
+    event.currentTarget.classList.add(`active`);
+    span.textContent = event.currentTarget.textContent;
+  });
+});
+
+submit.addEventListener("click", () => {
+  question.hidden = true;
+  response.hidden = false;
+});
