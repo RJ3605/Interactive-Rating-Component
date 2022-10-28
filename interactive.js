@@ -1,9 +1,9 @@
-var button = document.getElementsByClassName("rating");
-let question = document.getElementById("question");
-let response = document.getElementById("response");
-let submit = document.getElementById("submit");
-let active = document.getElementsByClassName("active");
-let span = document.getElementById("chosen");
+let button = document.querySelector(".rating");
+let question = document.querySelector("#question");
+let response = document.querySelector("#response");
+let submit = document.querySelector("#submit");
+let active = document.querySelector(".active");
+let span = document.querySelector("#chosen");
 
 response.hidden = true;
 
